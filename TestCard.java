@@ -1,17 +1,20 @@
 package Card.Card;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public class TestCard {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        Random rand = new Random();
 
-        char cardIndex1;
-        char cardIndex2;
         String yourCard1;
         String yourCard2;
         int yourCardNum1;
         int yourCardNum2;
+
+        char[] suits = { 'S', 'C', 'D', 'H' };
+
         int fCardNumRandom;
         int rCardNumRandom;
 
@@ -48,6 +51,11 @@ public class TestCard {
             System.out.println("Nonexistent Card Number choose 1 - 13 only");
             return;
         }
+
+        int index1 = rand.nextInt(suits.length);
+        int index2 = rand.nextInt(suits.length);
+        char randomSuit1 = suits[index1];
+        char randomSuit2 = suits[index2];
 
         fCardNumRandom = (int) (Math.random() * 100 % 13 + 1);
         rCardNumRandom = (int) (Math.random() * 100 % 13 + 1);
