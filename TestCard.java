@@ -15,8 +15,8 @@ public class TestCard {
 
         char[] suits = { 'S', 'C', 'D', 'H' };
 
-        int fCardNumRandom;
-        int rCardNumRandom;
+        int fCardNumRandomAI;
+        int sCardNumRandomAI;
 
         System.out.println("0.2% is the probability that both of your cards will match AI's both cards.");
         System.out.println("But its never 0%. Let's see if you are the lucky one.\n");
@@ -57,8 +57,13 @@ public class TestCard {
         char randomSuit1 = suits[index1];
         char randomSuit2 = suits[index2];
 
-        fCardNumRandom = (int) (Math.random() * 100 % 13 + 1);
-        rCardNumRandom = (int) (Math.random() * 100 % 13 + 1);
+        fCardNumRandomAI = (int) (Math.random() * 100 % 13 + 1);
+        sCardNumRandomAI = (int) (Math.random() * 100 % 13 + 1);
+
+        System.out.println("The AI's first card suit is: " + randomSuit1);
+        System.out.println("The Ai's first card number is: " + fCardNumRandomAI);
+        System.out.println("The AI's second card suit is: " + randomSuit2);
+        System.out.println("The AI's second card number is: " + sCardNumRandomAI);
 
         input.close();
     }
